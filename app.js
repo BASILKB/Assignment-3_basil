@@ -108,6 +108,7 @@ app.post('/process', (req, res) => {
   res.render('receipt', { receiptData });
 });
 
+//Starting the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
