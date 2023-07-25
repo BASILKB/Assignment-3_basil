@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Receipt</title>
+  <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+  <div class="receipt-container">
+    <div class="receipt">
+      <h2>Receipt</h2>
+      <div class="receipt-info">
+        <p><strong>Name:</strong> <%= receiptData.name %></p>
+        <p><strong>Address:</strong> <%= receiptData.address %></p>
+        <p><strong>City:</strong> <%= receiptData.city %></p>
+        <p><strong>Province:</strong> <%= receiptData.province %></p>
+        <p><strong>Phone:</strong> <%= receiptData.phone %></p>
+        <p><strong>Email:</strong> <%= receiptData.email %></p>
+      </div>
+
+      <hr>
+
+      <div class="receipt-products">
+        <p><strong>Products Bought:</strong> <%= receiptData.productsBought.join(', ') %></p>
+        <p><strong>Total Amount (before tax):</strong> $<%= receiptData.totalAmount.toFixed(2) %></p>
+        <p><strong>Sales Tax:</strong> $<%= receiptData.salesTax.toFixed(2) %></p>
+        <p class="total"><strong>Grand Total:</strong> $<%= receiptData.grandTotal.toFixed(2) %></p>
+      </div>
+
+      <p>Thank you for your purchase!</p>
+    </div>
+  </div>
+</body>
+</html>
